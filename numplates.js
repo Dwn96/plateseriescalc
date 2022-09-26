@@ -36,7 +36,7 @@ const charNumMap = new Map([
  * @returns {Number} - Digit representation of the number plate
  */
 function processPlate (plate) {
-    const plateArr = plate.split('').slice(1,plateA.length).reduce((acc, char) => {
+    const plateArr = plate.split('').slice(1,plate.length).reduce((acc, char) => {
         if ( !(Number(char))) {
             acc.push(charNumMap.get(char))
         }
